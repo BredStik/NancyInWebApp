@@ -9,12 +9,15 @@ namespace NancyInWebApp.Modules
 {
     public class Home:Nancy.NancyModule
     {
-        public Home(): base("/secure")
+        public Home()
         {
-            this.RequiresAuthentication();
+            
             this.RequiresHttps();
-            Get["/"] = parameters => {
-                var cookies = Request.Cookies;
+            
+            Get["/"] = _ => View["Default"];
+
+            Get["/secure"] = parameters => {
+                this.RequiresAuthentication();
                 return "hello!"; 
             };
             

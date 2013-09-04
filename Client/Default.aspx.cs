@@ -24,18 +24,27 @@ namespace Client
             //RESTSHARP!
 
             var restclient = new RestClient("https://localhost:44300");
+            restclient.Authenticator = new SimpleAuthenticator("userName", "mathieu", "password", "asd");
 
-            var restrequest = new RestRequest("/login", Method.GET);
+            var restrequest = new RestRequest("/login", Method.POST);
+            restrequest.AddHeader("Accept", "*/*");
 
             var restresponse = restclient.Execute(restrequest);
 
+            var responseCookies = restresponse.Cookies;
 
 
 
+            restclient.AddDefaultHeader("Client", "RichClient");
+            restclient.Authenticator = null;
+
+            var secureRequest = new RestRequest("/secure");
+            //secureRequest.AddCookie(responseCookies[0].Name, responseCookies[0].Value);
+
+            var secureResponse = restclient.Execute(secureRequest);
 
 
-
-
+            
 
 
 
