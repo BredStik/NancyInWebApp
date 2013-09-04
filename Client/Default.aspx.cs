@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
@@ -19,6 +20,25 @@ namespace Client
 
             // Create a request using a URL that can receive a post. 
             //WebRequest request = WebRequest.Create("https://localhost:44300/login");
+
+            //RESTSHARP!
+
+            var restclient = new RestClient("https://localhost:44300");
+
+            var restrequest = new RestRequest("/login", Method.GET);
+
+            var restresponse = restclient.Execute(restrequest);
+
+
+
+
+
+
+
+
+
+
+
 
             CookieContainer cookieJar = new CookieContainer();
 
