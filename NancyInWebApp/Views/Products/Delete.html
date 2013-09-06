@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="/content/scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+        function deleteProduct()
+        {
+            $.ajax({
+                url: '/Products/@Model.Id',
+                type: 'DELETE',
+                success: function (result) {
+                    // Do something with the result
+                    alert('item was deleted!');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Delete product" onclick="deleteProduct();" />
+</body>
+</html>

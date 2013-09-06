@@ -1,4 +1,5 @@
 ﻿using Nancy.Authentication.Forms;
+using Nancy.Conventions;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -10,9 +11,7 @@ using System.Web;
 namespace NancyInWebApp
 {
     public class CustomBootstrapper: Nancy.DefaultNancyBootstrapper
-    {
-        
-
+    {   
         protected override void RequestStartup(Nancy.TinyIoc.TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines, Nancy.NancyContext context)
         {
             base.RequestStartup(container, pipelines, context);            

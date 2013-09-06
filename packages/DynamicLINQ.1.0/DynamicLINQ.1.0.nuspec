@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>DynamicLINQ</id>
+    <version>1.0</version>
+    <title>DynamicLINQ</title>
+    <authors>David Fowler</authors>
+    <owners>David Fowler</owners>
+    <projectUrl>https://bitbucket.org/dfowler/dynamiclinq/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An evolution of the dynamic linq library based on C# 4 dynamic.</description>
+    <summary>An evolution of the dynamic linq library based on C# 4 dynamic.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>dynamic linq</tags>
+  </metadata>
+</package>
