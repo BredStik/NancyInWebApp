@@ -12,7 +12,7 @@ namespace NancyInWebApp.Modules
     {
         public Login()
         {
-            this.RequiresHttps();
+            //this.RequiresHttps();
             Get["/login"] = parameters => {
                 return View["login", new { ValidationError = Request.Query.error.HasValue, LoggedOut = Request.Query.loggedOut.HasValue, LoggedIn = Request.Query.loggedIn.HasValue }];
             };
