@@ -12,7 +12,7 @@ namespace NancyInWebApp.Modules
         public Home()
         {
             
-            this.RequiresHttps();
+            //this.RequiresHttps();
             
             Get["/"] = _ => View["Default"];
 
